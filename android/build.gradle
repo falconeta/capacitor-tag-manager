@@ -54,10 +54,7 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
-    // implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
-    // testImplementation "junit:junit:$junitVersion"
-    // androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
-    // androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.lifecycle:lifecycle-process:2.3.1'
+    implementation 'com.google.android.gms:play-services-tagmanager:18.1.1'
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
 }
