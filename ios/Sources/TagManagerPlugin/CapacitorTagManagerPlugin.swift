@@ -6,7 +6,24 @@ import Capacitor
  * here: https://capacitorjs.com/docs/plugins/ios
  */
 @objc(CapacitorTagManagerPlugin)
-public class CapacitorTagManagerPlugin: CAPPlugin {
+public class CapacitorTagManagerPlugin: CAPPlugin, CAPBridgedPlugin {
+
+    public let identifier = "CapacitorTagManagerPlugin"
+    public let jsName = "CapacitorTagManager"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "logEvent", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getAppInstanceId", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setConsent", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setUserId", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setUserProperty", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setCurrentScreen", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setSessionTimeoutDuration", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setEnabled", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "isEnabled", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "logEvent", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "resetAnalyticsData", returnType: CAPPluginReturnPromise)
+    ]
+
     public let errorUserIdMissing = "userId must be provided."
     public let errorKeyMissing = "key must be provided."
     public let errorValueMissing = "value must be provided."
