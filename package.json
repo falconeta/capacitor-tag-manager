@@ -1,6 +1,6 @@
 {
   "name": "@falconeta/capacitor-tag-manager",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "plugin used for wrapping and use google tag manager SDK",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
